@@ -1,4 +1,9 @@
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   main:
     allow-bean-definition-overriding: true
   autoconfigure:
@@ -19,18 +24,22 @@ spring:
     username: root
     password: 1234
 
-  # ✅ 改为 openai 前缀，使用官方 Spring AI 的 OpenAI 兼容模式对接通义千问
+
+
+
   ai:
     openai:
       api-key: sk-35c1c4253bde4f3fb741025b3621584e
       base-url: https://dashscope.aliyuncs.com/compatible-mode
       chat:
         options:
-          model: qwen-turbo        # 纯文本模型（不要用 qwen-vl-*，因为 Agent 不支持视觉）
+          model: qwen-turbo
       embedding:
         options:
+          batch-size: 10
           model: text-embedding-v3
+
 
     vectorstore:
       pgvector:
-        enabled: true              # 如果你的 PDF 上传需要向量检索，保留为 true
+        enabled: true
