@@ -1,0 +1,36 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  autoconfigure:
+    exclude:
+      - org.springframework.ai.retry.autoconfigure.SpringAiRetryAutoConfiguration
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  server:
+    tomcat:
+      max-swallow-size: 100MB
+  application:
+    name: heima-ai
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://localhost:3306/springai?serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+
+  # ✅ 改为 openai 前缀，使用官方 Spring AI 的 OpenAI 兼容模式对接通义千问
+  ai:
+    openai:
+      api-key: sk-35c1c4253bde4f3fb741025b3621584e
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+          model: qwen-turbo        # 纯文本模型（不要用 qwen-vl-*，因为 Agent 不支持视觉）
+      embedding:
+        options:
+          model: text-embedding-v3
+
+    vectorstore:
+      pgvector:
+        enabled: true              # 如果你的 PDF 上传需要向量检索，保留为 true
