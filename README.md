@@ -1,4 +1,4 @@
-# 企业文档 AI 助手（Spring AI + Vue3）
+# 企业文档 AI 助手（Spring AI + Vue3+SpringBoot）
 
 > 一个基于 RAG（检索增强生成）的企业级智能问答平台，支持文档管理、异步处理、多租户隔离与混合检索。
 
@@ -39,7 +39,7 @@
 - Node.js 18+
 - Docker (可选，用于快速启动 RabbitMQ/PostgreSQL)
 - Maven
-
+![项目演示](./docs/images/login-demo.png)
 ### 1. 克隆项目
 ```bash
 git clone https://github.com/Liumnary-hub/AI-documentFiles.git
