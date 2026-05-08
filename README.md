@@ -13,7 +13,7 @@
 - 🤖 **智能 RAG 问答** － 基于 Spring AI + PGVector，实现语义检索与生成式回答
 - 🧵 **异步高可靠性** － RabbitMQ 异步入库，超时保护、重试上限、死信队列，确保任务最终一致
 - 🔒 **多租户隔离** － 按 workspace 隔离文档与问答，保障数据安全
-- 🔍 **混合检索** － 支持 vector / hybrid（向量+BM25）模式切换，显著提升召回率
+- 🔍 **混合检索** �� 支持 vector / hybrid（向量+BM25）模式切换，显著提升召回率
 - 📊 **审计反馈闭环** － 操作日志、失败统计、用户反馈，持续优化问答质量
 - 🎨 **现代前端** － Vue3 + TypeScript + Pinia + Element Plus，文档中心分页与状态轮询
 
@@ -27,10 +27,6 @@
 | 前端 | Vue3, TypeScript, Vite, Pinia, Element Plus |
 | 构建工具 | Maven, npm |
 | 部署 | Docker, Docker Compose |
-
-## 📸 界面预览
-
-*（建议放几张项目截图，例如文档列表、问答对话框、检索效果对比）*
 
 ## 🚀 快速开始
 
